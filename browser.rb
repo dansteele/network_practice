@@ -49,5 +49,7 @@ browser = MyAmazingBrowser.new
 url = browser.prompt_user_for_path
 
 browser.get(url) do |response|
-  puts response
+  File.open("downloadedpage.html", "w") { |file|
+    file.write response
+  }
 end
