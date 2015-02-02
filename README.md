@@ -8,3 +8,4 @@ message so that you can see the connection working.
 2) Add support to your server so that you can serve a random image from the public/images folder
 3) Add support to your server so that you can serve any of the images matching a given path.
 4) Put on a shoes front-end to display the image.
+5) Update the front-end so that you can put in any URL and press a button to display the image.
