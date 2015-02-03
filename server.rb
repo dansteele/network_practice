@@ -28,13 +28,15 @@ RESPONSE
 end
 
 def parse(path)
-  path[0].split(" ")[1]
+  path[0].split(" ")
 end
 
 while true # Only one person can connect at a time
   puts "waiting for connection"
   link = server.accept
-  url = parse(link.recvmsg)
+  verb, url, args = parse(link.recvmsg)
+
+  binding.pry
 
   if url.include? "image"
     link.puts response(File.read(Dir.pwd + url), "image/jpeg")
@@ -44,6 +46,7 @@ while true # Only one person can connect at a time
   else
     link.puts response(html)
   end
+  
   link.close
 end
 
