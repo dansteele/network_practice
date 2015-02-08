@@ -1,0 +1,26 @@
+<form method="POST" action="/update/<%=bird.id%>">
+
+<fieldset>
+  <label for="name">Name</label/>
+  <input type="text" name="name" value="<%=bird.name%>"/>
+</fieldset>
+
+
+<fieldset>
+  <label for="wingspan">Wingspan</label/>
+  <input type="text" name="wingspan" value="<%=bird.wingspan%>"/>
+</fieldset>
+
+<fieldset>
+  <label for="image_url">Image URL</label/>
+  <input type="text" name="image_url" value="<%=bird.image_url%>"/>
+</fieldset>
+
+
+<input type="submit" value="Save"/>
+
+</form>
+
+<form method="POST" action="/update/<%=bird.id%>">
+<input type="submit" value="Delete"/>
+</form>
